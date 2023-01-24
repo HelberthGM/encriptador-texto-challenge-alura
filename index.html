@@ -7,6 +7,10 @@
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,12 +20,12 @@
         <section class="ingresar-datos">
             <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui..."></textarea>
             
-            <div class="warning">
-                <img src="images/Vector.png" alt="warning">
-                <p class="info">Solo letras minúsculas y sin acentos</p>
-            </div>
+            <p class="info">
+                <img src="images/Vector.png" alt="warning"> Solo letras minúsculas y sin acentos
+            </p>
             
-            <button class="encriptar">Encriptar</button>
+            
+            <button class="encriptar" onclick="">Encriptar</button>
             <button class="desencriptar">Desencriptar</button>
         </section>
 
@@ -33,12 +37,9 @@
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
+            
 
         </section>
     </main>
-    <footer>
-        <!-- <p>linkedin - github</p>
-        <p class="by"> By Helberth Garcia - 2023</p> -->
-    </footer>
 </body>
 </html>
