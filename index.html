@@ -11,6 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="scripts/app.js"></script>
 </head>
 <body>
     <header>
@@ -25,21 +26,21 @@
             </p>
             
             
-            <button class="encriptar" onclick="">Encriptar</button>
-            <button class="desencriptar">Desencriptar</button>
+            <button class="encriptar" onclick={}>Encriptar</button>
+            <button class="desencriptar" onclick={}>Desencriptar</button>
         </section>
 
         <section class="resultado">
-
-            <img src="images/Muñeco.png" alt="Muñeco">
-
-            <div class="no-data">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="no-info">
+                <img src="images/Muñeco.png" alt="Muñeco" class="munieco">          
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            
-
+                <button class="desencriptar copiar" >Copiar</button>
         </section>
     </main>
+    <footer>
+        <p>Designed by <a href="https://www.linkedin.com/in/helberthgm/" target="_blank">Helberth Garcia</a></p>
+    </footer>
 </body>
 </html>
