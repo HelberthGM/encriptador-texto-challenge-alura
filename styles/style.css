@@ -121,3 +121,38 @@ footer p a{
     color: #E9ECF8;
 }
 
+@media screen and (max-width:1024px) {
+    .ingresar-datos{
+        width: auto;
+    }
+
+    button{
+        width: 100%;
+    }
+
+    .resultado{
+        width: auto;
+        height: auto;
+        padding: 0 2em;
+    }
+
+    .munieco{
+        display: none;
+    }
+
+    .copiar{
+        position: relative;
+        width: inherit;
+        margin-bottom: 5%;
+    }
+
+    footer{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-height:790px) and (max-width:1024px){
+    footer{
+        bottom: auto;
+    }
+}
