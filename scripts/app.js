@@ -44,3 +44,42 @@ function desencriptar(texto) {
 }
 
 // conexion con el html
+function mostarEncriptado() {
+  let texto = document.getElementById("texto").value;
+  let campoResultado = document.querySelector(".no-info");
+  let btnCopiar = document.querySelector(".copiar");
+
+  if(! /[^a-zñ .,!:;-]/.test(texto) && texto != ""){
+    // si no hay mayusculas ni acentos
+    campoResultado.innerHTML = '<p id="txtEncriptado" disabled>' +encriptar(texto) + "</p>";
+    btnCopiar.setAttribute("style","display:inline")
+    
+  }else{
+    alert("Solo letras minúsculas y sin acentos.")
+  }
+
+}
+
+function mostrarDesencriptado() {
+  let texto = document.getElementById("texto").value;
+  let campoResultado = document.querySelector(".no-info");
+  let btnCopiar = document.querySelector(".copiar");
+  
+  //console.log(/[^a-zñ .,!:;]/.test(texto));
+
+  if(! /[^a-zñ .,!:;-]/.test(texto) && texto != ""){
+    // si no hay mayusculas ni acentos
+    campoResultado.innerHTML = '<p id="txtEncriptado" disabled>' +desencriptar(texto) + "</p>";
+    btnCopiar.setAttribute("style","display:inline")
+    
+  }else{
+    alert("Solo letras minúsculas y sin acentos.")
+  }
+}
+
+function copiarTexto() {
+  let txtEncriptado = document.getElementById("txtEncriptado");
+  navigator.clipboard.writeText(txtEncriptado.textContent)
+  //console.log("Copiado")
+}
+

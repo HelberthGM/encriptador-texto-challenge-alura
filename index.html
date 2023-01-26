@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="scripts/app.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="images/Logo.png" alt="logo de alura" class="logo">
+      <img src="images/Logo.png" alt="logo de alura" class="logo" />
     </header>
     <main>
-        <section class="ingresar-datos">
-            <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui..."></textarea>
-            
-            <p class="info">
-                <img src="images/Vector.png" alt="warning"> Solo letras minúsculas y sin acentos
-            </p>
-            
-            
-            <button class="encriptar" onclick={}>Encriptar</button>
-            <button class="desencriptar" onclick={}>Desencriptar</button>
-        </section>
+      <section class="ingresar-datos">
+        <textarea
+          name="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aqui..."
+        ></textarea>
 
-        <section class="resultado">
-            <div class="no-info">
-                <img src="images/Muñeco.png" alt="Muñeco" class="munieco">          
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-                <button class="desencriptar copiar" >Copiar</button>
-        </section>
+        <p class="info">
+          <img src="images/Vector.png" alt="warning" /> Solo letras minúsculas y
+          sin acentos
+        </p>
+
+        <button class="encriptar" onclick="mostarEncriptado()">
+          Encriptar
+        </button>
+        <button class="desencriptar" onclick="mostrarDesencriptado()">
+          Desencriptar
+        </button>
+      </section>
+
+      <section class="resultado">
+        <div class="no-info">
+          <img src="images/Muñeco.png" alt="Muñeco" class="munieco" />
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <button class="desencriptar copiar" onclick="copiarTexto()">
+          Copiar
+        </button>
+      </section>
     </main>
     <footer>
-        <p>Designed by <a href="https://www.linkedin.com/in/helberthgm/" target="_blank">Helberth Garcia</a></p>
+      <p>
+        Designed by
+        <a href="https://www.linkedin.com/in/helberthgm/" target="_blank"
+          >Helberth Garcia</a
+        >
+      </p>
     </footer>
-</body>
+  </body>
 </html>
