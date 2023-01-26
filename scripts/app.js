@@ -49,11 +49,10 @@ function mostarEncriptado() {
   let campoResultado = document.querySelector(".no-info");
   let btnCopiar = document.querySelector(".copiar");
 
-  if(! /[^a-zñ .,!:;-]/.test(texto) && texto != ""){
+  if(! /[A-Zäëïöüáéíóúáéíóúâêîôûàèìòù]/.test(texto) && texto != ""){
     // si no hay mayusculas ni acentos
     campoResultado.innerHTML = '<p id="txtEncriptado" disabled>' +encriptar(texto) + "</p>";
     btnCopiar.setAttribute("style","display:inline")
-    
   }else{
     alert("Solo letras minúsculas y sin acentos.")
   }
@@ -67,7 +66,7 @@ function mostrarDesencriptado() {
   
   //console.log(/[^a-zñ .,!:;]/.test(texto));
 
-  if(! /[^a-zñ .,!:;-]/.test(texto) && texto != ""){
+  if(! /[A-Zäëïöüáéíóúáéíóúâêîôûàèìòù]/.test(texto) && texto != ""){
     // si no hay mayusculas ni acentos
     campoResultado.innerHTML = '<p id="txtEncriptado" disabled>' +desencriptar(texto) + "</p>";
     btnCopiar.setAttribute("style","display:inline")
