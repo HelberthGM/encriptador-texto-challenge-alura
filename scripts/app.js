@@ -49,7 +49,7 @@ function mostarEncriptado() {
   let campoResultado = document.querySelector(".no-info");
   let btnCopiar = document.querySelector(".copiar");
 
-  if(! /[A-Zäëïöüáéíóúáéíóúâêîôûàèìòù]/.test(texto) && texto != ""){
+  if(! /[A-ZäÄëËïÏöÖüÜáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ]/.test(texto) && texto != ""){
     // si no hay mayusculas ni acentos
     campoResultado.innerHTML = '<p id="txtEncriptado" disabled>' +encriptar(texto) + "</p>";
     btnCopiar.setAttribute("style","display:inline")
@@ -63,10 +63,8 @@ function mostrarDesencriptado() {
   let texto = document.getElementById("texto").value;
   let campoResultado = document.querySelector(".no-info");
   let btnCopiar = document.querySelector(".copiar");
-  
-  //console.log(/[^a-zñ .,!:;]/.test(texto));
 
-  if(! /[A-Zäëïöüáéíóúáéíóúâêîôûàèìòù]/.test(texto) && texto != ""){
+  if(! /[A-ZäÄëËïÏöÖüÜáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ]/.test(texto) && texto != ""){
     // si no hay mayusculas ni acentos
     campoResultado.innerHTML = '<p id="txtEncriptado" disabled>' +desencriptar(texto) + "</p>";
     btnCopiar.setAttribute("style","display:inline")
@@ -79,6 +77,4 @@ function mostrarDesencriptado() {
 function copiarTexto() {
   let txtEncriptado = document.getElementById("txtEncriptado");
   navigator.clipboard.writeText(txtEncriptado.textContent)
-  //console.log("Copiado")
 }
-
